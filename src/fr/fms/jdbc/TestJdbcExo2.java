@@ -31,11 +31,11 @@ public class TestJdbcExo2 {
 			try(Statement statement = connection.createStatement()){
 				try(ResultSet resultSet = statement.executeQuery(strSql)){
 					while(resultSet.next()) {
-						int rsIdUser = resultSet.getInt(1);// soit index(de 1 à n) de la colonne, soit le nom de la colonne
+						int rsIdArticle = resultSet.getInt(1);// soit index(de 1 à n) de la colonne, soit le nom de la colonne
 						String rsDescription = resultSet.getString(2);
 						String rsBrand = resultSet.getString(3);
 						double rsPrice = resultSet.getDouble(4);
-						articles.add((new Article(rsIdUser, rsDescription, rsBrand, rsPrice)));
+						articles.add((new Article(rsIdArticle, rsDescription, rsBrand, rsPrice)));
 					}
 				}
 			}
