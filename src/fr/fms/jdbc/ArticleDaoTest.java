@@ -38,9 +38,9 @@ public class ArticleDaoTest {
         if (readArticle != null) {
             boolean isDeleted = articleDao.delete(readArticle);
             if (isDeleted) {
-                System.out.println("Article deleted successfully.");
+                System.out.println("Article supprimé avec succès.");
             } else {
-                System.out.println("Article deletion failed.");
+                System.out.println("La suppression de l'article a échoué.");
             }
         }
     }
